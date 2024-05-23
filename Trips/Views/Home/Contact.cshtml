@@ -1,0 +1,80 @@
+﻿@model ContactU
+
+@{
+    Layout = "~/Views/Shared/_Homelayout.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Travelling a Travel Category Responsive Web Template | Contact </title>
+    <link rel="stylesheet" href="assets/css/style-freedom.css">
+</head>
+
+<body>
+
+
+    <section class="w3l-inner-banner-main">
+        <div class="banner-9">
+            <div class="wrapper">
+                <ul class="breadcrumbs-custom-path">
+                    <li><a href="index.html">Home <span class="fa fa-angle-right" aria-hidden="true"></span></a></li>
+                    <li><a href="#pages">Pages <span class="fa fa-angle-right" aria-hidden="true"></span></a></li>
+                    <li class="active">Contact</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- //covers -->
+    <section class="w3l-contact-hny-6">
+        <!-- contact -->
+        <div class="contact-section">
+            <div class="map-fo">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d215987.13548054945!2d35.901164826817134!3d31.945366152139107!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151ca2d62b17b739%3A0x582c04f254850196!2sAmman%2C%20Jordan!5e0!3m2!1sen!2sin!4v1650676880492!5m2!1sen!2sin"
+                        allowfullscreen=""></iframe>
+
+                <div class="resp-cont">
+                    <form asp-controller="ContactUs" asp-action="Create" method="post" class="contact-form">
+                        <h5>Contacts</h5>
+                        <p>We want to hear from you</p>
+                        <input type="email" asp-for="Email" placeholder="Email" required="">
+                        <input type="text" asp-for="PhoneNumber" placeholder="Phone Number" required="">
+                        <textarea placeholder="Message" asp-for="MMessage" required=""></textarea>
+                        <button type="submit" class="btn buttonbg">Send Now</button>
+                        @if (TempData.ContainsKey("SuccessMessage"))
+                        {
+                            <div class="alert alert-success" role="alert">
+                                @TempData["SuccessMessage"]
+                            </div>
+                        }
+                    </form>
+                </div>
+            </div>
+            <div class="contact-info-ad">
+                <div class="wrapper">
+                    <div class="grid">
+                        <div class="adress-lavi-info">
+                            <h3>Visit Us</h3>
+                            <p>
+                                The company name
+                                <br>Trips in Jordan <br> Jordan, Amman
+                            </p>
+                        </div>
+                        <div class="adress-lavi-info">
+                            <h3>Contact Us</h3>
+                            <p><a href="tel:+962797750532">+962-797750532</a></p>
+                            <p><a href="tel:+962781005003">+962-781005003</a></p>
+                            <p><a href="mailto:info@example.com" class="mail">mail@example.com</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

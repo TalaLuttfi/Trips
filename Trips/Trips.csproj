@@ -1,0 +1,45 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="wwwroot\LoginAndRegisterAssets\css\.vs\VSWorkspaceState.json" />
+    <Content Include="wwwroot\LoginAndRegisterAssets\fonts\.vs\VSWorkspaceState.json" />
+    <Content Include="wwwroot\LoginAndRegisterAssets\images\.vs\VSWorkspaceState.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="itext7" Version="8.0.4" />
+    <PackageReference Include="iTextSharp" Version="5.5.13.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="6.0.23" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.5">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.16" />
+    <PackageReference Include="ODP.NetCore" Version="2.0.12" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\LoginAndRegisterAssets\css\.vs\css\FileContentIndex\91dcab4e-649a-407e-8306-f4304b555062.vsidx" />
+    <None Include="wwwroot\LoginAndRegisterAssets\css\.vs\slnx.sqlite" />
+    <None Include="wwwroot\LoginAndRegisterAssets\fonts\.vs\fonts\FileContentIndex\1c85241c-2471-43fa-ab77-53e8608caa67.vsidx" />
+    <None Include="wwwroot\LoginAndRegisterAssets\fonts\.vs\fonts\FileContentIndex\2451392b-e4f1-4cb0-8b72-a01c5592913f.vsidx" />
+    <None Include="wwwroot\LoginAndRegisterAssets\fonts\.vs\slnx.sqlite" />
+    <None Include="wwwroot\LoginAndRegisterAssets\images\.vs\images\FileContentIndex\a63d6b59-94bb-4a21-9d51-7915ae87023e.vsidx" />
+    <None Include="wwwroot\LoginAndRegisterAssets\images\.vs\slnx.sqlite" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\LoginAndRegisterAssets\css\.vs\css\v17\" />
+    <Folder Include="wwwroot\LoginAndRegisterAssets\fonts\.vs\fonts\v17\" />
+    <Folder Include="wwwroot\LoginAndRegisterAssets\images\.vs\images\v17\" />
+  </ItemGroup>
+
+</Project>

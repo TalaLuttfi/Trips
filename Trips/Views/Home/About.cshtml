@@ -1,0 +1,101 @@
+﻿@model IEnumerable<AboutContant>
+@{
+    Layout = "~/Views/Shared/_Homelayout.cshtml";
+}
+
+<section class="w3l-inner-banner-main">
+    <div class="banner-9 sec-img">
+        <div class="wrapper">
+            <ul class="breadcrumbs-custom-path">
+                <li><a href="index.html">Home <span class="fa fa-angle-right" aria-hidden="true"></span></a></li>
+                <li><a href="#pages">Pages <span class="fa fa-angle-right" aria-hidden="true"></span></a></li>
+                <li class="active">Trips</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="w3l-call-to-action-19">
+    <div class="action-19">
+        <div class="wrapper">
+            <div class="callaction">
+                <div class="d-grid grid-col-2 grid-action-19">
+                    <div class="column2-action-19">
+                        <a href="single.html"><img src="~/Homeassits/images/a2.jpg" alt="" style="  box-shadow: 5px 1px 13px #4d4d4e;border-radius: 10px;" /></a>
+                    </div>
+
+                    <div class="column1-action-19">
+                        @foreach (var item in Model)
+                        {
+
+
+                            <h2 class="call-head-action-19">
+                                <a href="single.html" style="text-shadow: 1px 1px 10px cadetblue;">@item.Titel </a>
+                            </h2>
+                            <p class="call-para-action-19">
+                                @item.Pragraph
+                            </p>
+                            <div class="main-action-19">
+                                <a href="single.html" class="buttonbg action-btn-19">Learn More</a>
+                                <a href="about.html" class="button button-dark">Explore</a>
+                            </div>
+
+
+                        }
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="w3l-teams-32-main">
+    <div class="teams-32" style=" background-color: rgb(239, 232, 232); ">
+        <div class="wrapper">
+            <h3 class="title-main" style="text-shadow: 1px 1px 10px cadetblue;">Our Wonderful Team</h3>
+
+            <div class="d-grid grid-col-4 align-center main-contteam-32">
+                <div class="team-main-19">
+                    <div class="column-19">
+                        <a><img class="img-fluid" src="~/Homeassits/images/Talaa.jpeg" alt=" "></a>
+                    </div>
+                    <div class="right-team-9">
+                        <h6><a class="title-team-32">Tala Lutfi</a></h6>
+
+
+                    </div>
+                </div>
+                <div class="team-main-19">
+                    <div class="column-19">
+                        <a><img class="img-fluid" src="~/Homeassits/images/Heba.jpeg" alt=" "></a>
+                    </div>
+                    <div class="right-team-9">
+                        <h6><a class="title-team-32">Heba Abuzakieh</a></h6>
+
+
+                    </div>
+                </div>
+                <div class="team-main-19">
+                    <div class="column-19">
+                        <a><img class="img-fluid" src="~/Homeassits/images/Sohib.jpeg" alt=" "></a>
+                    </div>
+                    <div class="right-team-9">
+                        <h6><a class="title-team-32">Soheb Al-Barahmeh</a></h6>
+
+
+                    </div>
+                </div>
+                <div class="team-main-19">
+                    <div class="column-19">
+                        <a><img class="img-fluid" src="~/Homeassits/images/Sanaa.jpeg" alt=" "></a>
+                    </div>
+                    <div class="right-team-9">
+                        <h6><a class="title-team-32">Sana' Al-Saleh</a></h6>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

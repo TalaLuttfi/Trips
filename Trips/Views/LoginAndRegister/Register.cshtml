@@ -1,0 +1,115 @@
+﻿@model User 
+@{
+    ViewData["Title"] = "Register";
+}
+@{
+	Layout = "~/Views/Shared/_Guestlayout.cshtml";
+}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,
+initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible"
+		  content="ie=edge">
+		  <title>Sign Up Form by Colorlib</title>
+<!-- Font Icon -->
+<link rel="stylesheet"
+href="~/LoginAndRegisterAssets/fonts/materialicon/css/material-design-iconic-font.min.css">
+<!-- Main css -->
+<link rel="stylesheet"
+href="~/LoginAndRegisterAssets/css/style.css">
+</head>
+
+<body>
+
+<section class="w3l-form-34-main">
+	<div class="form34-sub">
+		<div class="form34">
+			<h4 class="form-head">Sign Up</h4>
+			<p class="form-para">Create your account. Its free</p>
+	
+			<div class="form-34or">or</div>
+
+			<form asp-action="Register" method="post" enctype="multipart/form-data">
+					<div class="form-group">
+						<label asp-for="Fullname" class="text-head"></label>
+						<input asp-for="Fullname" class="form-control" placeholder="Your Name" required />
+
+						 <span asp-validation-for="Fullname" class="text-danger"></span>
+					</div>
+
+					<div class="form-group">
+						<label asp-for="Username" class="text-head"></label>
+						<input asp-for="Username" class="form-control" placeholder="Your Email" required />
+						<span asp-validation-for="Username" class="text-danger"></span>
+					</div>
+
+					<div class="form-group">
+						<label asp-for="UPassword" class="text-head">Password</label>
+						<input asp-for="UPassword" type="password" class="form-control" placeholder="Your Password" required />
+						<span asp-validation-for="UPassword" class="text-danger"></span>
+					</div>
+
+					<div class="form-group">
+						<label asp-for="PhoneNum" class="text-head"></label>
+						<input asp-for="PhoneNum" type="text" class="form-control" placeholder="Phone Number" required />
+						<span asp-validation-for="PhoneNum"  class=" text-danger"></span>
+					</div>
+
+
+					<div class="form-group">
+						<label asp-for="Gender" class="text-head"></label>
+						<input asp-for="Gender" type="text" class="form-control" placeholder="Male/Female" required />
+						<span asp-validation-for="Gender" class=" text-danger"></span>
+					</div>
+
+
+                      
+					<div class="form-group">
+						<label asp-for="ImageFile"><i class="zmdi zmdi-account material-icons-name">Image</i></label>
+						<input asp-for="ImageFile" required />
+					</div>
+
+
+
+
+					<button type="submit" class="buttonbg signinbutton">Sign Up</button>
+				@* 	<p class="signup">
+						Already have an account? class="signuplink">Sign In
+					</p> *@
+				</form>
+
+	@* <form action="#" method="post">
+				<div class="">
+					<p class="text-head">Name</p>
+					<input type="text" class="input" placeholder="Your Name" required />
+				</div>
+				<div class="">
+					<p class="text-head">Email</p>
+					<input type="email" class="input" placeholder="Your Email" required />
+				</div>
+				<div class="">
+					<p class="text-head">Password</p>
+					<input type="password" class="input" placeholder="Password" required />
+				</div>
+				<div class="">
+					<p class="text-head">Confirm Password</p>
+					<input type="password" class="input" placeholder="Confirm Password" required />
+				</div>
+				<label class="container">
+					<input type="checkbox" checked>
+					<span class="checkmark"></span>I agree to <a hreg="#terms">Terms of Use</a> & <a hreg="#policy">Privacy Policy</a>
+				</label>
+				<button type="submit" class="buttonbg signinbutton">Sign Up</button>
+				<p class="signup">
+					Already have an account?<a href="login.html" class="signuplink">Sign In</a>
+				</p>
+			</form>  *@
+		</div>
+	</div>
+</section>
+</body>
+</html>

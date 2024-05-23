@@ -1,0 +1,546 @@
+﻿@model Tuple<IEnumerable<AboutContant>, IEnumerable<HomeContant> , IEnumerable<ContactU> >
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+@{
+    Layout = "~/Views/Shared/_Guestlayout.cshtml";
+}
+
+<style>
+    body {
+        background-color: rgb(239, 232, 232);
+    }
+</style>
+
+<body>
+  
+    <!-- covers -->
+    <section class="w3l-covers-9-main">
+        <div class="covers-9">
+            <div class="csslider infinity" id="slider1">
+                <input type="radio" name="slides" checked="checked" id="slides_1" />
+                <input type="radio" name="slides" id="slides_2" />
+                <input type="radio" name="slides" id="slides_3" />
+                <input type="radio" name="slides" id="slides_4" />
+                <ul class="banner_slide_bg">
+                     @foreach (var item in Model.Item2)
+                     {
+                        switch (item.Id)
+                        {
+
+
+                            case 13:
+
+                                <li>
+                                    <div class="wrapper">
+                                        <div class="cover-top-center-9">
+                                            <div class="w3ls_cover_txt-9">
+                                                <h6 class="tag-cover-9" style="text-shadow: 1px 1px 10px cadetblue;">Trip</h6>
+                                                <h3 class="title-cover-9" style="text-shadow: 1px 1px 10px cadetblue;">@item.Titel</h3>
+                                                <p class="para-cover-9" style="text-shadow: 1px 1px 10px cadetblue;">@item.Pragraph</p>
+                                              
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                break;
+                            case 14:
+                                <li>
+                                    <div class="wrapper">
+                                        <div class="cover-top-center-9">
+                                            <div class="w3ls_cover_txt-9">
+                                                <h6 class="tag-cover-9" style="text-shadow: 1px 1px 10px cadetblue;">Great Experience</h6>
+                                                <h3 class="title-cover-9" style="text-shadow: 1px 1px 10px cadetblue;">@item.Titel</h3>
+                                                <p class="para-cover-9" style="text-shadow: 1px 1px 10px cadetblue;"> @item.Pragraph</p>
+                                 
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                break;
+                            case 15:
+                                <li>
+                                    <div class="wrapper">
+                                        <div class="cover-top-center-9">
+                                            <div class="w3ls_cover_txt-9">
+                                                <h6 class="tag-cover-9" style="text-shadow: 1px 1px 10px cadetblue;">Enjoy</h6>
+                                                <h3 class="title-cover-9" style="text-shadow: 1px 1px 10px cadetblue;">@item.Titel</h3>
+                                                <p class="para-cover-9" style="text-shadow: 1px 1px 10px cadetblue;">@item.Pragraph</p>
+                                               
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                break;
+                            case 16:
+                                <li>
+                                    <div class="wrapper">
+                                        <div class="cover-top-center-9">
+                                            <div class="w3ls_cover_txt-9">
+                                                <h6 class="tag-cover-9" style="text-shadow: 1px 1px 10px cadetblue;">What Next city?</h6>
+                                                <h3 class="title-cover-9" style="text-shadow: 1px 1px 10px cadetblue;">@item.Titel</h3>
+                                                <p class="para-cover-9" style="text-shadow: 1px 1px 10px cadetblue;">@item.Pragraph</p>
+                                             
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                break;
+                        }
+                     }
+                        </ul>
+                <div class="arrows">
+                    <label for="slides_1"></label>
+                    <label for="slides_2"></label>
+                    <label for="slides_3"></label>
+                    <label for="slides_4"></label>
+                </div>
+                <div class="navigation">
+                    <div>
+                        <label for="slides_1"></label>
+                        <label for="slides_2"></label>
+                        <label for="slides_3"></label>
+                        <label for="slides_4"></label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <h3 class="title-main" style="text-shadow: 1px 1px 10px cadetblue;margin-top: 8%;">This is Jordan</h3>
+    <p class="sub-title">The world is a book and those who do not travel read only one page.</p>
+
+    <div>
+        <video controls style="
+            align-items: center;
+            width: 50%;
+            margin-left: 25%;
+            margin-top: 3px;
+            margin-bottom: 5%;
+            border-radius: 10px;
+            box-shadow: 5px 1px 13px #4d4d4e; ;">
+            <source src="~/Homeassits/images/jordan.mp4" type="video/mp4">
+
+        </video>
+
+    </div>
+    <!-- //covers -->
+    <!-- form -->
+    <!--  <section class="w3l-form-my-mian">
+        <div class="form-botm-cont">
+            <div class="">
+              <div class="form-inner-cont">
+                    <div class="d-grid top-content-7">
+                        <h4 class="left-text-inti">Get the Best Holiday Planned by Experts!</h4>
+                        <a href="tel:+1-800-999-800"><b>Tel:</b> +1-800-999-800</a>
+                    </div>
+                    <form action="#" method="post" class="d-grid signin-form">
+                        <div class="form-input">
+                            <input type="text" name="name" placeholder="Your Name" required />
+                        </div>
+                        <div class="form-input">
+                            <input type="email" name="email" placeholder="Email" required />
+                        </div>
+                        <div class="form-input">
+                            <input type="text" name="number" placeholder="Mobile Number" required />
+                        </div>
+                        <div class="section-input">
+                            <div class="sec-grid-1">
+                                <select name="carlist" form="carform">
+                                    <option value="volvo">Aug 2019</option>
+                                    <option value="saab">Nov 2019</option>
+                                    <option value="opel">Dec 2019</option>
+                                    <option value="audi">Jan 2020</option>
+                                    <option value="audi">Feb 2020</option>
+                                    <option value="audi">Mar 2020</option>
+                                    <option value="audi">Apr 2020</option>
+                                    <option value="audi">May 2020</option>
+                                    <option value="audi">Jun 2020</option>
+                                    <option value="audi">Jul 2020</option>
+                                    <option value="audi">Aug 2020</option>
+                                    <option value="audi">Sep 2020</option>
+                                    <option value="audi">Nov 2020</option>
+                                    <option value="audi">Dec 2020</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button class="btn buttonbg">Submit</button>
+                    </form>
+                    <p class="sub-paragraph">By submitting this form, you authorize Travel and its partners to contact
+                        you for this enquiry.</p>
+                </div>
+            </div>
+        </div>
+    </section>-->
+    <!-- //form -->
+    <section class="w3l-grids-6">
+        <!-- grids -->
+        <div class="grids-layout">
+            <div class="wrapper">
+                <h3 class="title-main" style="text-shadow: 1px 1px 10px cadetblue;">Popular Destination</h3>
+                <p class="sub-title">These are some places you can visit and have a good time.</p>
+                <div class="d-grid grid-column-3">
+                    <div class="gd-innf">
+                        <a><img class="img-responsive" src="~/Homeassits/images/grid1.jpg" alt="image"></a>
+                        <h3><a  class="vv-link">Wadi Rum</a></h3>
+                    </div>
+                    <div class="gd-innf">
+                        <a ><img class="img-responsive" src="~/Homeassits/images/grid2.jpg" alt="image"></a>
+                        <h3><a  class="vv-link">Dead Sea</a></h3>
+                    </div>
+                    <div class="gd-innf">
+                        <a ><img class="img-responsive" src="~/Homeassits/images/grid3.jpg" alt="image"></a>
+                        <h3><a  class="vv-link">Petra</a></h3>
+                    </div>
+                </div>
+                <div class="d-grid grid-column-3 second-grids">
+                    <div class="gd-innf">
+                        <a ><img class="img-responsive" src="~/Homeassits/images/grid4.jpg" alt="image"></a>
+                        <h3><a  class="vv-link">Ajloun</a></h3>
+                    </div>
+                    <div class="gd-innf">
+                        <a ><img class="img-responsive" src="~/Homeassits/images/grid5.jpg" alt="image"></a>
+                        <h3><a class="vv-link">Amman</a></h3>
+                    </div>
+                    <div class="gd-innf">
+                        <a ><img class="img-responsive" src="~/Homeassits/images/grid6.jpg" alt="image"></a>
+                        <h3><a  class="vv-link">Aqaba</a></h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //grids -->
+    </section>
+    <!-- Call to action 29 block -->
+    <section class="w3l-call-to-action-29">
+        <div class="cal-action-29">
+            <div class="wrapper">
+                <div class="action-main-29 align-center">
+                    <h4 class="cal-action-text-29">
+                        <a href="book.html">Buy a Tour Without Leaving Your Home</a>
+                    </h4>
+                    <p class="sub-paragraph actioncall-29">
+                        Using our website, you can easily find and book any tour you
+                        want. Mobile users will definitely enjoy our app available on all devices.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- //Call to action 29 block -->
+    <!-- call to action 19 -->
+    <section class="w3l-call-to-action-19">
+        <div class="action-19">
+            <div class="wrapper">
+                <div class="callaction">
+                    <div class="d-grid grid-col-2 grid-action-19">
+                        <div class="column2-action-19">
+                            <a href="single.html"><img src="~/Homeassits/images/a2.jpg" alt="" style="  box-shadow: 5px 1px 13px #4d4d4e;border-radius: 10px;" /></a>
+                        </div>
+
+                        <div class="column1-action-19">
+                             @foreach (var item in Model.Item1)
+                             {
+                                
+                                  
+                                        <h2 class="call-head-action-19">
+                                            <a href="single.html" style="text-shadow: 1px 1px 10px cadetblue;">@item.Titel </a>
+                                        </h2>
+                                        <p class="call-para-action-19">
+                                            @item.Pragraph 
+                                        </p>
+                             }
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- //call to action 19 -->
+    <!-- features -->
+    <!-- <section class="w3l-feature-9">
+         <div class="main-w3">
+             <div class="wrapper">
+                 <div class="d-grid main-cont-wthree-fea">
+                     <div class="grids-feature">
+                         <div class="icon-bg">
+                             <span class="fa fa-plane" aria-hidden="true"></span>
+                         </div>
+                         <h4><a href="book.html" class="title-head">Air Tickets</a></h4>
+                         <p>In such lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiud tempor.</p>
+                         <a href="book.html" class="button">Read More </a>
+                     </div>
+                     <div class="grids-feature">
+                         <div class="icon-bg">
+                             <span class="fa fa-thumbs-o-up" aria-hidden="true"></span>
+                         </div>
+                         <h4><a href="team.html" class="title-head">Tourist Guide</a></h4>
+                         <p>Ncididunt ut labore et dolore magna minim veniam, quis nostrud exercitation ullamco.</p>
+                         <a href="team.html" class="button">Read More </a>
+                     </div>
+                     <div class="grids-feature">
+                         <div class="icon-bg">
+                             <span class="fa fa-bed" aria-hidden="true"></span>
+                         </div>
+                         <h4><a href="book.html" class="title-head">Hotel Bookings</a></h4>
+                         <p>Duis aute irure dolor in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                         <a href="book.html" class="button">Read More </a>
+                     </div>
+                 </div>
+             </div>
+         </div>
+     </section>-->
+    <!-- //features -->
+    <!-- products -->
+    <section class="w3l-products-1">
+        <div class="products1">
+            <div class="wrapper">
+                <div class="products1-content">
+                    <div class="column">
+                        <a >
+                            <img src="~/Homeassits/images/package1.jpg" alt=""
+                                 class="img-responsive img-fluid" />
+                        </a>
+                        <h4><a>Umm Qais , Irbid</a></h4>
+                        <p>Starting at $45,99</p>
+                        <ul class="star">
+                            <li><span class="fa fa-star" aria-hidden="true"></span></li>
+                            <li><span class="fa fa-star" aria-hidden="true"></span></li>
+                            <li><span class="fa fa-star" aria-hidden="true"></span></li>
+                            <li><span class="fa fa-star" aria-hidden="true"></span></li>
+                            <li><span class="fa fa-star-o" aria-hidden="true"></span></li>
+                            <span>4.0(76)</span>
+                        </ul>
+                    </div>
+                    <div class="column">
+                        <a>
+                            <img src="~/Homeassits/images/package2.jpg" alt=""
+                                 class="img-responsive img-fluid" />
+                        </a>
+                        <h4><a >Sheraton , Amman</a></h4>
+                        <p>Starting at $40,99</p>
+                        <ul class="star">
+                            <li><span class="fa fa-star" aria-hidden="true"></span></li>
+                            <li><span class="fa fa-star" aria-hidden="true"></span></li>
+                            <li><span class="fa fa-star" aria-hidden="true"></span></li>
+                            <li><span class="fa fa-star" aria-hidden="true"></span></li>
+                            <li><span class="fa fa-star-o" aria-hidden="true"></span></li>
+                            <span>4.0(47)</span>
+                        </ul>
+                    </div>
+                    <div class="column">
+                        <a>
+                            <img src="~/Homeassits/images/package3.jpg" alt=""
+                                 class="img-responsive img-fluid" />
+                        </a>
+                        <h4><a >Ma'in ,Madaba </a></h4>
+                        <p>Starting at $24,99</p>
+                        <ul class="star">
+                            <li><span class="fa fa-star" aria-hidden="true"></span></li>
+                            <li><span class="fa fa-star" aria-hidden="true"></span></li>
+                            <li><span class="fa fa-star" aria-hidden="true"></span></li>
+                            <li><span class="fa fa-star" aria-hidden="true"></span></li>
+                            <li><span class="fa fa-star-o" aria-hidden="true"></span></li>
+                            <span>4.0(112)</span>
+                        </ul>
+                    </div>
+                    <div class="column">
+                        <a>
+                            <img src="~/Homeassits/images/package4.jpg" alt=""
+                                 class="img-responsive img-fluid" />
+                        </a>
+                        <h4><a >Castle, Al-Karak </a></h4>
+                        <p>Starting at $19,99</p>
+                        <ul class="star">
+                            <li><span class="fa fa-star" aria-hidden="true"></span></li>
+                            <li><span class="fa fa-star" aria-hidden="true"></span></li>
+                            <li><span class="fa fa-star" aria-hidden="true"></span></li>
+                            <li><span class="fa fa-star" aria-hidden="true"></span></li>
+                            <li><span class="fa fa-star-o" aria-hidden="true"></span></li>
+                            <span>4.0(32)</span>
+                        </ul>
+                    </div>
+                    <div class="column">
+                        <a >
+                            <img src="~/Homeassits/images/package5.jpg" alt=""
+                                 class="img-responsive img-fluid" />
+                        </a>
+                        <h4><a >Dead Sea,South</a></h4>
+                        <p>Starting at $39,99</p>
+                        <ul class="star">
+                            <li><span class="fa fa-star" aria-hidden="true"></span></li>
+                            <li><span class="fa fa-star" aria-hidden="true"></span></li>
+                            <li><span class="fa fa-star" aria-hidden="true"></span></li>
+                            <li><span class="fa fa-star" aria-hidden="true"></span></li>
+                            <li><span class="fa fa-star-o" aria-hidden="true"></span></li>
+                            <span>4.0(146)</span>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- //products1 -->
+    <!-- specifications -->
+    <section class="w3l-specifications-9">
+        <div class="main-w3">
+            <div class="wrapper">
+                <div class="d-flex main-cont-wthree-fea">
+                    <div class="grids-speci">
+                        <h3 class="title-spe">36</h3>
+                        <p>Region</p>
+                    </div>
+                    <div class="grids-speci midd-eff-spe">
+                        <h3 class="title-spe">15 Years</h3>
+                        <p>of Experience</p>
+                    </div>
+                    <div class="grids-speci">
+                        <h3 class="title-spe">+100</h3>
+                        <p>Guide</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //specifications -->
+    </section>
+    <!-- teams 32 block -->
+    <section class="w3l-teams-32-main">
+        <div class="teams-32" style=" background-color: rgb(239, 232, 232); ">
+            <div class="wrapper">
+                <h3 class="title-main" style="text-shadow: 1px 1px 10px cadetblue;">Our Wonderful Team</h3>
+                
+                <div class="d-grid grid-col-4 align-center main-contteam-32">
+                    <div class="team-main-19">
+                        <div class="column-19">
+                            <a ><img class="img-fluid" src="~/Homeassits/images/Talaa.jpeg" alt=" "></a>
+                        </div>
+                        <div class="right-team-9">
+                            <h6><a  class="title-team-32">Tala Lutfi</a></h6>
+                           
+                           
+                        </div>
+                    </div>
+                    <div class="team-main-19">
+                        <div class="column-19">
+                            <a ><img class="img-fluid" src="~/Homeassits/images/Heba.jpeg" alt=" "></a>
+                        </div>
+                        <div class="right-team-9">
+                            <h6><a  class="title-team-32">Heba Abuzakieh</a></h6>
+                         
+                           
+                        </div>
+                    </div>
+                    <div class="team-main-19">
+                        <div class="column-19">
+                            <a ><img class="img-fluid" src="~/Homeassits/images/Sohib.jpeg" alt=" "></a>
+                        </div>
+                        <div class="right-team-9">
+                            <h6><a  class="title-team-32">Soheb Al-Barahmeh</a></h6>
+                      
+                           
+                        </div>
+                    </div>
+                    <div class="team-main-19">
+                        <div class="column-19">
+                            <a ><img class="img-fluid" src="~/Homeassits/images/Sanaa.jpeg" alt=" "></a>
+                        </div>
+                        <div class="right-team-9">
+                            <h6><a  class="title-team-32">Sana' Al-Saleh</a></h6>
+                           
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- //teams 32 block -->
+    <!-- w3l-customers-7 -->
+    <section class="w3l-customers-7">
+        <div class="customers_sur">
+            <div class="wrapper">
+                <h3 class="title-main" style="text-shadow: 1px 1px 10px cadetblue;">Clients Says</h3>
+                <div class="customers-top_sur">
+                    <div class="customers-left_sur">
+                        <div class="customers_grid">
+                            <p class="sub-test">
+                                It was a very interesting country with many top sights, a fascinating culture and very friendly people.
+                                I felt safe exploring by myself and at the same time not too constrained by the tour schedule. It was a perfect arrangement for me -
+                                a customised feel and at the same time having the logistics taken care of. Sight highlights were Petra, Wadi Rum and Jerash.
+                                I would love to upload some photos, but they are not ready yet. If I may I would like to submit some in a little while,We learned
+                                from our friends who visited Jordan before. Petra  great place to visit.
+                            </p>
+                            <div class="customers-bottom_sur">
+                                <div class="custo-img-res">
+                                    <img src="~/Homeassits/images/testi1.jpg" alt=" " class="img img-responsive">
+                                </div>
+                                <div class="custo_grid">
+                                    <h5>Cha Jiun</h5>
+                                    <span>Regular Client</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="customers-middle_sur">
+                        <div class="customers_grid">
+                            <p class="sub-test">
+                                They very efficiently connected us with the local agency who took very good care
+                                of us . We were met at the airport and taken to the
+                                Sheraton hotel in Amman, a very busy city. No problem getting there through heavy traffic. The itinerary included Jerash,
+                                Amman, Petra, Dana and Wadi
+                                Rum with the Bedouins. All by car and all very comfortable. Great explanations of the places we visited.
+                                Favorites: Jerash, Dead Sea, Petra and Wadi Rum. That's pretty much the whole trip. There was a travel day from the Dead Sea to Petra which wasn't so interesting.
+                                .
+                            </p>
+                            <div class="customers-bottom_sur">
+                                <div class="custo-img-res">
+                                    <img src="~/Homeassits/images/testi2.jpg" alt=" " class="img img-responsive">
+                                </div>
+                                <div class="custo_grid">
+                                    <h5>Henry Itondo</h5>
+                                    <span>Regular Client</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="customers-right_sur">
+                        <div class="customers_grid">
+                            <p class="sub-test">
+                                We had an amazing trip. Our itinerary was perfect and the support from the local agency was wonderful
+                                . But the highlight besides the beautiful country, wonderful people and amazing food was our terrific driver Basil who could not have been more wonderful
+                                and accomodating. His recommendations for schedule adjustments,. he also adjusted our schedule to
+                                our every last minute whim. He was absolutely the best and we recommend both Him and Hala's Agency in Jordan.
+                                The service, hotels and everything was just amazing.
+                            </p>
+                            <div class="customers-bottom_sur">
+                                <div class="custo-img-res">
+                                    <img src="~/Homeassits/images/testi3.jpg" alt=" " class="img img-responsive">
+                                </div>
+                                <div class="custo_grid">
+                                    <h5>Fua Lamba</h5>
+                                    <span>Regular Client</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="w3l-inner-banner-main">
+        <div class="banner-9">
+            <div class="wrapper">
+                <ul class="breadcrumbs-custom-path">
+                    <li><a href=""> <span class="fa fa-angle-right" aria-hidden="true"></span></a></li>
+                    <li><a href=""> <span class="fa fa-angle-right" aria-hidden="true"></span></a></li>
+                    <li class="active"></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+   
+   
+</body>

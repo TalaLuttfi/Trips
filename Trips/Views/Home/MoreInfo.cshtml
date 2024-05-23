@@ -1,0 +1,103 @@
+﻿@model Trip
+
+@{
+    Layout = "~/Views/Shared/_Homelayout.cshtml";
+}
+
+<head>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .card {
+            width: 100%;
+            margin-top: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom:20px;
+        }
+
+        .card-img-top {
+            max-height: 400px;
+            object-fit: cover;
+        }
+
+        .card-body {
+            padding: 20px;
+        }
+
+        .card-title {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .card-text {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+        }
+
+            .btn-primary:hover {
+                background-color: #0056b3;
+            }
+
+        .custom-btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 18px;
+            border-radius: 4px;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+            .custom-btn:hover {
+                background-color: #45a049;
+            }
+    </style>
+</head>
+
+<section class="w3l-inner-banner-main">
+    <div class="banner-9 sec-img">
+        <div class="wrapper">
+            <ul class="breadcrumbs-custom-path">
+                <li><a href="index.html">Home <span class="fa fa-angle-right" aria-hidden="true"></span></a></li>
+                <li><a href="#pages">Pages <span class="fa fa-angle-right" aria-hidden="true"></span></a></li>
+                <li class="active">Trips</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<h1 style="margin-top: 20px; margin-left: 20px; font-size: 40px;">Trip Details</h1>
+<hr />
+
+<div class="row">
+    <div class="col-md-8 offset-md-2">
+        <div class="card">
+            <img src="~/Images/@Model.ImagePath" class="card-img-top" alt="@Model.TripName">
+            <div class="card-body">
+                <h5 class="card-title">@Model.TripName</h5>
+                <p class="card-text">@Model.Destination</p>
+                <p class="card-text">@Model.StartDestination</p>
+                <p class="card-text">@Model.FinalDestination</p>
+                <p class="card-text">@Model.TDescription</p>
+                <p class="card-text">Start Date: @Model.StartDate</p>
+                <p class="card-text">End Date: @Model.EndDate</p>
+                <p class="card-text">Cost: @Model.Cost</p>
+                <a href="/Home/Book?cost=@Model.Cost&TripId=@Model.Id" class="btn btn-primary custom-btn">Book Now</a>
+
+
+
+            </div>
+        </div>
+    </div>
+</div>

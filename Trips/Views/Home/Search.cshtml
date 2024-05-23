@@ -1,0 +1,41 @@
+﻿@model IEnumerable<Trips.Models.Trip>
+@{
+    Layout = "~/Views/Shared/_Homelayout.cshtml";
+}
+<head>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+<section class="w3l-inner-banner-main">
+    <div class="banner-9 sec-img">
+        <div class="wrapper">
+            <ul class="breadcrumbs-custom-path">
+                <li><a href="index.html">Home <span class="fa fa-angle-right" aria-hidden="true"></span></a></li>
+                <li><a href="#pages">Pages <span class="fa fa-angle-right" aria-hidden="true"></span></a></li>
+                <li class="active">Trips</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<h1 style="margin-top:20px; margin-left:20px; font-size: 40px;">Trips</h1>
+<hr />
+
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <div class="col-md-4 mb-4">
+            <div class="card" style="margin-left:10px; margin-right:10px;">
+                <img src="~/Images/@item.ImagePath" class="card-img-top" style="max-height: 200px; object-fit: cover;">
+                <div class="card-body">
+                    <h5 class="card-title">@item.TripName</h5>
+                    <p class="card-text">Destination : @item.Destination</p>
+                    <p class="card-text">Start Date: @item.StartDate</p>
+                    <p class="card-text">End Date: @item.EndDate</p>
+                    <p class="card-text">Cost: @item.Cost</p>
+                    <a asp-controller="Home" asp-action="MoreInfo" asp-route-Id="@item.Id" class="btn btn-primary">More Information</a>
+                </div>
+            </div>
+        </div>
+    }
+</div>

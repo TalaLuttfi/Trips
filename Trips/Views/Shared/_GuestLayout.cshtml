@@ -1,0 +1,167 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    @*  <title>Travelling a Travel Category Responsive Web Template | Home </title> *@
+    <link rel="stylesheet" href="~/Homeassits/css/style-freedom.css">
+
+
+<style>
+    .sig_in {
+        border-radius: 10%;
+        padding: 3px;
+        color: aliceblue;
+        background-color: darksalmon;
+        border-color: darksalmon;
+        text-decoration: none;
+    }
+
+    .register {
+        border-radius: 10%;
+        padding: 3px;
+        color: aliceblue;
+        background-color: darksalmon;
+        border-color: darksalmon;
+        text-decoration: none;
+    }
+
+    .sig_in:hover {
+        background-color: tan;
+    }
+
+    .register:hover {
+        background-color: tan;
+    }
+</style>
+</head>
+<body>
+
+    <!--header -->
+    <div class="w3l-headers-9">
+        <header>
+            <div class="wrapper">
+                <div class="header">
+
+                    <div>
+                        <h1>
+                            <a class="logo" href="/Home/Index">
+                                <img src="~/Homeassits/images/logo.jpg" alt="Your logo" title="Your logo" style="height:35px;" />
+                            </a> 
+                            <a href="/Home/Index" class="logo">Magical Trips</a>
+                            
+                        </h1>
+                    </div>
+
+
+                    <div class="bottom-menu-content">
+                        <input type="checkbox" id="nav" />
+                        <label for="nav" class="menu-bar"></label>
+                        <nav>
+                            <ul class="menu">
+                                <li style="padding-right:300px"><a href="/Home/Index" class="link-nav">Home</a></li>
+                                <li><a href="/LoginAndRegister/Login" class="sig_in" class="link-nav">Signin</a></li>
+                                <li><a href="/LoginAndRegister/Register" class="register " class="link-nav">Signup</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+
+
+                </div>
+            </div>
+        </header>
+        <!-- //header -->
+
+
+        <div style="padding-top:50px;">
+            @RenderBody()
+        </div>
+
+
+
+        <section class="w3l-footer-16">
+            <!-- w3l-footer-16 -->
+            <div class="w3l-footer-16-main">
+                <div class="wrapper">
+                    <div class="grid">
+                        <div class="column">
+                            <h2><a href="index.html" class="logo-2">Travelling</a></h2>
+                            <p>
+                                All rights reserved.<br>©️2019
+                            </p>
+                        </div>
+                        <div class="column">
+                            <h3>About</h3>
+                            <ul class="footer-gd-16">
+                                <li><a href="faq.html">FAQs</a></li>
+                                <li><a href="/Home/About">About Us</a></li>
+
+
+                            </ul>
+
+                        </div>
+                        <div class="column">
+                            <h3>Pages</h3>
+                            <ul class="footer-gd-16">
+                                <li><a href="/Home/User">Home</a></li>
+                                <li><a href="/Home/About">About</a></li>
+                                <li><a href="/Home/Trips">Trips</a></li>
+                                <li><a href="/Home/Contact">Contact Us</a></li>
+                                <li><a href="/LoginAndRegister/Login">Login</a></li>
+                                <li><a href="/LoginAndRegister/Register">Signup</a></li>
+                            </ul>
+                        </div>
+                
+                        <div class="column column3">
+                            <h3>Explore</h3>
+                            <ul class="footer-gd-16">
+                                <li><a href="#help">Support Center</a></li>
+                                <li><a href="#terms">Terms & Conditions</a></li>
+                                <li><a href="#privacy">Privacy Policy</a></li>
+                            </ul>
+                        </div>
+                @*         <div class="column column4">
+                            <h3>Subscribe </h3>
+                            <form action="#" class="subscribe" method="post">
+                                <input type="email" name="email" placeholder="Placeholder" required="">
+                                <button><span class="fa fa-paper-plane" aria-hidden="true"></span></button>
+                            </form>
+                            <p>Subscribe to our mailing list and get updates to your email inbox.</p>
+                        </div> *@
+                    </div>
+                </div>
+            </div>
+            <!-- move top -->
+            <button onclick="topFunction()" id="movetop" title="Go to top">
+                <span class="fa fa-angle-up"></span>
+            </button>
+            <script>
+                // When the user scrolls down 20px from the top of the document, show the button
+                window.onscroll = function () {
+                    scrollFunction()
+                };
+
+                function scrollFunction() {
+                    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                        document.getElementById("movetop").style.display = "block";
+                    } else {
+                        document.getElementById("movetop").style.display = "none";
+                    }
+                }
+
+                // When the user clicks on the button, scroll to the top of the document
+                function topFunction() {
+                    document.body.scrollTop = 0;
+                    document.documentElement.scrollTop = 0;
+                }
+            </script>
+            <!-- //move top -->
+        </section>
+        <!-- //w3l-footer-16 -->
+
+
+</body>
+</html>

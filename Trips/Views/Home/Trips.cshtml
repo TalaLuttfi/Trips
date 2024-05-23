@@ -1,0 +1,95 @@
+﻿@model IEnumerable<Trips.Models.Trip>
+@{
+    Layout = "~/Views/Shared/_Homelayout.cshtml";
+}
+<head>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+<section class="w3l-inner-banner-main">
+    <div class="banner-9 sec-img">
+        <div class="wrapper">
+            <ul class="breadcrumbs-custom-path">
+                <li><a href="index.html">Home <span class="fa fa-angle-right" aria-hidden="true"></span></a></li>
+                <li><a href="#pages">Pages <span class="fa fa-angle-right" aria-hidden="true"></span></a></li>
+                <li class="active">Trips</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+@* @* <form asp-controller="Home" asp-action="Search" method="get" class="d-flex ml-3 mr-3 mt-3">
+    <div class="form-group mr-2">
+        <label for="destinationDropdown">Destination:</label>
+        <select id="destinationDropdown" name="destination" class="form-control">
+            <option value="">All Destinations</option>
+            @foreach (var destination in ViewBag.Destinations.Items)
+            {
+                <option value="@destination">@destination</option>
+            }
+        </select>
+    </div>
+    <div class="form-group mr-2">
+        <label for="categoryDropdown">Category:</label>
+        <select id="categoryDropdown" name="category" class="form-control">
+            <option value="">All Categories</option>
+            @foreach (var category in ViewBag.Categories.Items)
+            {
+                <option value="@category">@category</option>
+            }
+        </select>
+    </div>
+    <butt on class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+</form> *@
+
+<form asp-controller="Home" asp-action="Search" method="get" class="my-3">
+    <div class="row">
+        <div class="col-md-4 form-group">
+            <label for="destinationDropdown" class="fw-bold" style="color: blue;">Select Destination:</label>
+            <select id="destinationDropdown" name="destination" class="form-control">
+                <option value="">All Destinations</option>
+                @foreach (var destination in ViewBag.Destinations.Items)
+                {
+                    <option value="@destination">@destination</option>
+                }
+            </select>
+        </div>
+        <div class="col-md-4 form-group align-self-end">
+            <!-- Add align-self-end class here -->
+            <label for="categoryDropdown" class="fw-bold" style="color: blue;">Select Category:</label>
+            <select id="categoryDropdown" name="category" class="form-control">
+                <option value="">All Categories</option>
+                @foreach (var category in ViewBag.Categories.Items)
+                {
+                    <option value="@category">@category</option>
+                }
+            </select>
+        </div>
+        <div class="col-md-4 form-group align-self-end">
+            <!-- Add align-self-end class here -->
+            <button class="btn btn-primary btn-block fw-bold" type="submit">Search</button>
+        </div>
+    </div>
+</form>
+
+<h1 style="margin-top:20px; margin-left:20px; font-size: 40px;">Trips</h1>
+<hr />
+
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <div class="col-md-4 mb-4">
+            <div class="card" style="margin-left:10px; margin-right:10px;">
+                <img src="~/Images/@item.ImagePath" class="card-img-top" style="max-height: 200px; object-fit: cover;">
+                <div class="card-body">
+                    <h5 class="card-title">@item.TripName</h5>
+                    <p class="card-text">Destination :@item.Destination</p>
+                    <p class="card-text">Start Date: @item.StartDate</p>
+                    <p class="card-text">End Date: @item.EndDate</p>
+                    <p class="card-text">Cost: @item.Cost</p>
+                    <a asp-controller="Home" asp-action="MoreInfo" asp-route-Id="@item.Id" class="btn btn-primary">More Information</a>
+                </div>
+            </div>
+        </div>
+    }
+</div>
